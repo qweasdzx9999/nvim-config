@@ -22,13 +22,14 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ["<A-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-                ["<A-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-                ["<A-n>"] = cmp.mapping.scroll_docs(-4),
-                ["<A-m>"] = cmp.mapping.scroll_docs(4),
-                ["<A-h>"] = cmp.mapping.complete(),
-                ["<A-e>"] = cmp.mapping.abort(),
-                ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+                ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+                ["<C-n>"] = cmp.mapping.scroll_docs(-4),
+                ["<C-m>"] = cmp.mapping.scroll_docs(4),
+                ["<C-h>"] = cmp.mapping.complete(),
+                ["<C-i>"] = cmp.mapping.abort(),
+                ["<C-u>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+
             }),
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
